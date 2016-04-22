@@ -100,7 +100,7 @@ if __name__ == '__main__':
     send_string(lcd, "", 4, 0)
 
     # This chunk shows time it takes for different operations
-    print "\n\rTiming Tests"
+    print("\n\rTiming Tests")
 
     send(lcd, ser)
     # print "Update Full LCD: " + str(timeit("send(lcd,ser)",setup="from __main__ import send,lcd",number=1)) # Send 3 dot test pattern
@@ -115,8 +115,8 @@ if __name__ == '__main__':
             lcd[x][y] = v
             v ^= 1
 
-    print "Update block of LCD: " + str(
+    print("Update block of LCD: " + str(
         timeit("send_portion(lcd,[10,15],[20,25])", setup="from __main__ import send_portion,lcd",
-               number=1))  # Upload smaller portion of data to test speed
+               number=1)))  # Upload smaller portion of data to test speed
 
     ser.close()
