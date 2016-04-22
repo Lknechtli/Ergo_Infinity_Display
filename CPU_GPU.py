@@ -44,12 +44,12 @@ if __name__ == '__main__':
             ).bytes_recv + psutil.net_io_counters().bytes_sent
 
             if (mem >= 60):
-                lcd_color(65535, 65535, 0, ser
+                lcd_color(16300, 16300, 0, ser
                           )  #RGB colors with max value of 65535 (16 bit) each
             elif (mem >= 80):
-                lcd_color(65535, 0, 0, ser)
+                lcd_color(16300, 0, 0, ser)
             else:
-                lcd_color(65535, 65535, 65535, ser
+                lcd_color(16300, 16300, 16300, ser
                           )  #RGB colors with max value of 65535 (16 bit) each
 
             for x in range(len(lcd)):  #Clean old LCD
